@@ -7,7 +7,7 @@ let modInfo = {
 
 	discordName: "therealdumpsterfire_rael",
 	discordLink: "",
-	initialStartPoints: new Decimal (100), // Used for hard resets and new players
+	initialStartPoints: new Decimal (0), // Used for hard resets and new players
 	offlineLimit: 3,  // In hours
 }
 
