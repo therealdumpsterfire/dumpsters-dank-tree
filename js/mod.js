@@ -1,28 +1,30 @@
 let modInfo = {
-	name: "The ??? Tree",
-	id: "mymod",
-	author: "nobody",
+	name: "dumpster's dank tree",
+	id: "therealdumpsterfire",
+	author: "therealdumpsterfire",
 	pointsName: "points",
 	modFiles: ["layers.js", "tree.js"],
 
-	discordName: "",
+	discordName: "therealdumpsterfire_rael",
 	discordLink: "",
-	initialStartPoints: new Decimal (10), // Used for hard resets and new players
-	offlineLimit: 1,  // In hours
+	initialStartPoints: new Decimal (100), // Used for hard resets and new players
+	offlineLimit: 3,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "Literally nothing",
+	num: "0.1",
+	name: "the dankiest tree ever is born",
 }
 
-let changelog = `<h1>Changelog:</h1><br>
-	<h3>v0.0</h3><br>
-		- Added things.<br>
-		- Added stuff.`
+let changelog = `<h1>changelog:</h1><br>
+	
+		<h3>v0.1: the dankiest tree ever is born</h3><br>
+		</h4>- new layer.</h4><br>`
 
-let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
+
+
+let winText = `wow cool you are dank you made it to the end of the da tree congrats`
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
