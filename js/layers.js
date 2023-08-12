@@ -1,4 +1,16 @@
-addLayer("p", {
+function hasUpgrade(layer, id) {
+    // Access the player's upgrade data based on the layer and id
+    const upgrade = player.upgrades[layer][id];
+    
+    // Check if the upgrade exists and is purchased
+    if (upgrade && upgrade.purchased) {
+      return true; // Upgrade is purchased
+    }
+    
+    return false; // Upgrade is not purchased
+  }
+  
+  addLayer("p", {
     name: "prestige",
     symbol: "P",
     position: 0,
@@ -19,11 +31,11 @@ addLayer("p", {
     exponent: 0.5,
     gainMult() {
       let gain = new Decimal(1); // Initialize gain with a default value
-      
+  
       if (hasUpgrade('p', 11)) {
         gain = gain.times(2); // Update gain if the player has upgrade 11
       }
-      
+  
       return gain;
     },
     gainExp() {
