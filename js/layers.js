@@ -1,7 +1,7 @@
 addLayer("p", {
-    name: "prestige", // This is optional, only used in a few places. If absent, it just uses the layer id.
-    symbol: "P", // This appears on the layer's node. Default is the id with the first letter capitalized.
-    position: 0, // Horizontal position within a row. By default, it uses the layer id and sorts in alphabetical order.
+    name: "prestige",
+    symbol: "P",
+    position: 0,
     startData() {
       return {
         unlocked: true,
@@ -9,29 +9,27 @@ addLayer("p", {
       };
     },
     color: "#4BDC13",
-    requires: new Decimal(10), // Can be a function that takes requirement increases into account.
-    resource: "prestige points", // Name of the prestige currency.
-    baseResource: "points", // Name of the resource the prestige is based on.
+    requires: new Decimal(10),
+    resource: "prestige points",
+    baseResource: "points",
     baseAmount() {
       return player.points;
-    }, // Get the current amount of baseResource.
-    type: "normal", // normal: cost to gain currency depends on the amount gained. static: cost depends on how much you already have.
-    exponent: 0.5, // Prestige currency exponent.
+    },
+    type: "normal",
+    exponent: 0.5,
     gainMult() {
-      // Calculate the multiplier for the main currency from bonuses.
-      mult = new Decimal(1);
+      let gain = new Decimal(1); // Initialize gain with a default value
       
       if (hasUpgrade('p', 11)) {
-        mult = mult.times(2); // Double the gain multiplier if the player has upgrade 11.
+        gain = gain.times(2); // Update gain if the player has upgrade 11
       }
       
-      return mult;
+      return gain;
     },
     gainExp() {
-      // Calculate the exponent on the main currency from bonuses.
       return new Decimal(1);
     },
-    row: 0, // Row the layer is in on the tree (0 is the first row).
+    row: 0,
     hotkeys: [
       {
         key: "p",
