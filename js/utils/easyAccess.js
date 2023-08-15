@@ -1,4 +1,5 @@
 function hasUpgrade(layer, id) {
+<<<<<<< HEAD
 	if (tmp[layer] && tmp[layer].deactivated) {
 	  return false;
 	}
@@ -8,6 +9,9 @@ function hasUpgrade(layer, id) {
 		player[layer].upgrades.includes(id.toString())) &&
 	  !tmp[layer].deactivated
 	);
+=======
+	return ((player[layer].upgrades.includes(toNumber(id)) || player[layer].upgrades.includes(id.toString())) && !tmp[layer].deactivated)
+>>>>>>> parent of f681ffa (Update easyAccess.js)
 }
 
 function hasMilestone(layer, id) {
