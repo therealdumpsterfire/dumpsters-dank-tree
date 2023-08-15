@@ -1,6 +1,14 @@
 function hasUpgrade(layer, id) {
-	return ((player[layer].upgrades.includes(toNumber(id)) || player[layer].upgrades.includes(id.toString())) && !tmp[layer].deactivated)
-}
+	if (tmp[layer] && tmp[layer].deactivated) {
+	  return false;
+	}
+  
+	return (
+	  (player[layer].upgrades.includes(toNumber(id)) ||
+		player[layer].upgrades.includes(id.toString())) &&
+	  !tmp[layer].deactivated
+	);
+  }
 
 function hasMilestone(layer, id) {
 	return ((player[layer].milestones.includes(toNumber(id)) || player[layer].milestones.includes(id.toString())) && !tmp[layer].deactivated)
