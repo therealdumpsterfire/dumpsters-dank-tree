@@ -24,7 +24,6 @@ addLayer("d", {
   hotkeys: [
       {key: "d", description: "d: Reset for dank power", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
   ],
-<<<<<<< HEAD
   layerShown(){return true},
   upgrades: {
     11: {
@@ -33,7 +32,4 @@ addLayer("d", {
         cost: new Decimal(1),
     },
   },
-=======
-  layerShown(){return true}
->>>>>>> parent of ac99af9 (Update layers.js)
 })
