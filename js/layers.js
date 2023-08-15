@@ -4,7 +4,7 @@ addLayer("d", {
   position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
   startData() { return {
       unlocked: true,
-      points: new Decimal(0),
+  points: new Decimal(0),
   }},
   color: "#4BDC13",
   requires: new Decimal(10), // Can be a function that takes requirement increases into account
@@ -24,6 +24,7 @@ addLayer("d", {
   hotkeys: [
       {key: "d", description: "d: Reset for dank power", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
   ],
+<<<<<<< HEAD
   layerShown(){return true},
   upgrades: {
     11: {
@@ -32,4 +33,7 @@ addLayer("d", {
         cost: new Decimal(1),
     },
   },
+=======
+  layerShown(){return true}
+>>>>>>> parent of ac99af9 (Update layers.js)
 })
