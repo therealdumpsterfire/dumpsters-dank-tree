@@ -8,7 +8,7 @@ function hasUpgrade(layer, id) {
 		player[layer].upgrades.includes(id.toString())) &&
 	  !tmp[layer].deactivated
 	);
-  }
+}
 
 function hasMilestone(layer, id) {
 	return ((player[layer].milestones.includes(toNumber(id)) || player[layer].milestones.includes(id.toString())) && !tmp[layer].deactivated)
