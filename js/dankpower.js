@@ -31,5 +31,14 @@ addLayer("d", {
         description: "triple point gain. gotta start with a normal upgrade somehow",
         cost: new Decimal(1),
     },
+    12: {
+        title: "point generator",
+        description: "the point generation will grow by getting more prestige points",
+        cost: new Decimal(2),
+        effect() {
+            return player[this.layer].points.add(1).pow(0.5)
+        },
+        effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+    },
   },
 })
