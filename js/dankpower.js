@@ -8,7 +8,7 @@ addLayer("d", {
   }},
   color: "#73c0ff",
   requires: new Decimal(10), // Can be a function that takes requirement increases into account
-  resource: "dank energy", // Name of prestige currency
+  resource: "dank power", // Name of prestige currency
   baseResource: "points", // Name of resource prestige is based on
   baseAmount() {return player.points}, // Get the current amount of baseResource
   type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
@@ -36,7 +36,7 @@ addLayer("d", {
         description: "the point generation will grow by getting more prestige points",
         cost: new Decimal(5),
         effect() {
-            return player[this.layer].points.add(1).pow(0.5)
+            return player[this.layer].points.add(1).pow(0.45)
         },
         effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
     },
