@@ -20,7 +20,7 @@ let VERSION = {
 let changelog = `<h1>changelog:</h1><br>
 	
 		<h3>v0.1: the dankiest tree ever is born</h3><br>
-		</h4>- new layer.</h4><br>`
+		</h4>- new layer: dank power</h4><br>`
 
 
 
