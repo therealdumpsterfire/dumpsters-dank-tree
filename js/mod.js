@@ -3,7 +3,7 @@ let modInfo = {
 	id: "therealdumpsterfire",
 	author: "therealdumpsterfire",
 	pointsName: "points",
-	modFiles: ["dankpower.js", "tree.js"],
+	modFiles: ["dankpower.js", "tree.js, a.js"],
 
 	discordName: "therealdumpsterfire_rael",
 	discordLink: "",
