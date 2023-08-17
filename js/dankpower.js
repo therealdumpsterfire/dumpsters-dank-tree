@@ -34,7 +34,7 @@ addLayer("d", {
     12: {
         title: "point generator",
         description: "the point generation will grow by getting more prestige points",
-        cost: new Decimal(2),
+        cost: new Decimal(5),
         effect() {
             return player[this.layer].points.add(1).pow(0.5)
         },
